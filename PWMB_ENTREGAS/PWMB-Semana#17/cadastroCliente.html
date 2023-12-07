@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCadastro.css">
+    <title>Cadastro de Clientes</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>Cadastro de Clientes</h1>
+
+        <form id="cadastroClientes">
+            <label>Nome:</label>
+            <input type="text" name="nmCliente" id="nmCliente"><br><br>
+
+            <label>Sobrenome:</label>
+            <input type="text" name="sobrenomeCliente" id="sobrenomeCliente"><br><br>
+
+            <label>Código Postal do Pedido: </label>
+            <input type="int" name="codigoPedido" id="codigoPedido"><br><br>
+
+            <label>Nome do Produto </label>
+            <input type="text" name="nomeProduto" id="nomeProduto"><br><br>
+
+            <label>Data de Nascimento:</label>
+            <input type="text" name="datadenascimento" id="datadenascimento" required oninput="formatarData()"><br><br>
+
+            <label>CEP:</label>
+            <input type="text" name="cepCliente" id="cepCliente" required oninput="formatarCep()" ><br><br>
+
+            <label>Endereço:</label>
+            <input type="text" name="enderecoCliente" id="enderecoCliente"><br><br>
+
+            <label>Número:</label>
+            <input type="int" name="numeroCliente" id="numeroCliente"><br><br>
+
+            <label>UF:</label>
+            <select name="ufCliente" id="ufCliente">
+                <option value=""></option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+
+               
+
+            </select><br><br>
+
+            <button type="submit"  id ="btnCadastrar" onclick="cadastrarCliente()">Cadastrar</button>
+        </form>
+
+        <div id="clientesList">
+
+        </div>
+
+        <div id="relatorio">
+            <button type="button" onclick="mostrarRelatorio();">Relatório</button>
+        </div>
+    </div>
+
+    <script src="scriptCadastro.js"></script>
+</body>
+
+</html>
